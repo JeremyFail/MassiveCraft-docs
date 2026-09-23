@@ -1,0 +1,140 @@
+# Main Settings
+site_name: Factions Wiki
+site_description: Documentation for MassiveCore plugins maintained by Jeremy Fail, including Factions, FactionsChat, and CreativeGates.
+site_url: https://factions.wiki/
+site_author: Jeremy Fail
+copyright: "Copyright by Jeremy Fail - View the license attributions for each plugin on each plugin's main page."
+
+# Repo Settings
+repo_url: https://github.com/JeremyFail/MassiveCraft
+
+# Navigation
+nav:
+  - Home: index.md
+  - Factions:
+      - Introduction: Factions/index.md
+      - Player Guide:
+          - Overview: Factions/player-guide/index.md
+          - Faction Management: Factions/player-guide/faction-management.md
+          - Strategy & Tips: Factions/player-guide/strategy-tips.md
+      - Admin Guide:
+          - Overview: Factions/admin-guide/index.md
+          - Commands: Factions/admin-guide/commands.md
+          - Permissions: Factions/admin-guide/permissions.md
+          - Configuration: Factions/admin-guide/configuration.md
+          - Integrations:
+              - Overview: Factions/admin-guide/integrations/index.md
+              - PlaceholderAPI: Factions/admin-guide/integrations/placeholderapi.md
+              - TeamsAPI: Factions/admin-guide/integrations/teamsapi.md
+              - BlueMap: Factions/admin-guide/integrations/bluemap.md
+              - Dynmap: Factions/admin-guide/integrations/dynmap.md
+              - Pl3xMap: Factions/admin-guide/integrations/pl3xmap.md
+              - SquareMap: Factions/admin-guide/integrations/squaremap.md
+              - WorldGuard: Factions/admin-guide/integrations/worldguard.md
+              - Economy Plugins: Factions/admin-guide/integrations/economy.md
+      - Developer Guide:
+          - Overview: Factions/developer-guide/index.md
+          - Development Setup: Factions/developer-guide/setup.md
+          - Basic Usage: Factions/developer-guide/basic-usage.md
+          - API Documentation: Factions/developer-guide/api.md
+          - Legacy API: Factions/developer-guide/legacy-api.md
+  - FactionsChat:
+      - Introduction: FactionsChat/index.md
+      - Player Guide:
+          - Overview: FactionsChat/player-guide/index.md
+          - Chat Channels: FactionsChat/player-guide/chat-channels.md
+          - Chat Formatting: FactionsChat/player-guide/chat-formatting.md
+          - Player Ignoring: FactionsChat/player-guide/player-ignoring.md
+      - Admin Guide:
+          - Overview: FactionsChat/admin-guide/index.md
+          - Commands: FactionsChat/admin-guide/commands.md
+          - Permissions: FactionsChat/admin-guide/permissions.md
+          - Configuration: FactionsChat/admin-guide/configuration.md
+          - Factions Support: FactionsChat/admin-guide/factions-support/index.md
+          - Integrations:
+              - Overview: FactionsChat/admin-guide/integrations/index.md
+              - PlaceholderAPI: FactionsChat/admin-guide/integrations/placeholderapi.md
+              - DiscordSRV: FactionsChat/admin-guide/integrations/discordsrv.md
+              - EssentialsX: FactionsChat/admin-guide/integrations/essentialsx.md
+  - CreativeGates:
+      - Introduction: CreativeGates/index.md
+      - Player Guide: CreativeGates/player-guide.md
+      - Admin Guide: CreativeGates/admin-guide.md
+  - MassiveBooks:
+      - Introduction: MassiveBooks/index.md
+      - Player Guide: MassiveBooks/player-guide.md
+      - Admin Guide: 
+          - Overview: MassiveBooks/admin-guide/index.md
+          - Commands: MassiveBooks/admin-guide/commands.md
+          - Permissions: MassiveBooks/admin-guide/permissions.md
+          - Configuration: MassiveBooks/admin-guide/configuration.md
+          - Integrations:
+              - Overview: MassiveBooks/admin-guide/integrations/index.md
+              - PlaceholderAPI: MassiveBooks/admin-guide/integrations/placeholderapi.md
+              - Economy Plugins: MassiveBooks/admin-guide/integrations/economy.md
+  - MassiveHat:
+      - Introduction: MassiveHat/index.md
+      - Player Guide: MassiveHat/player-guide.md
+      - Admin Guide: MassiveHat/admin-guide.md
+  - MassiveCore:
+      - Introduction: MassiveCore/index.md
+  - Other Plugins: FailproofPlugins/index.md
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: deep-purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: teal
+      accent: deep-purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  # font:
+  #   text: Merriweather Sans
+  #   code: Red Hat Mono
+  icon:
+    repo: fontawesome/brands/github
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  # static_templates:
+  #   - 404.html
+
+extra_css:
+  - css/overrides.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+    

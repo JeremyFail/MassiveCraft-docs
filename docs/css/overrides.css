@@ -1,0 +1,90 @@
+/* Main Colors */
+/*:root  > * {*/
+  /* Primary color shades */
+  /*--md-primary-fg-color:               #003C5E;
+  --md-primary-fg-color--light:        #4A90A4;
+  --md-primary-fg-color--dark:         #002A42;
+  --md-primary-bg-color:               hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light:        hsla(0, 0%, 100%, 0.7);*/
+
+  /* Accent color shades */
+  /*--md-accent-fg-color:                #ffab40;
+  --md-accent-fg-color--transparent:   hsla(32, 100%, 62%, 0.1);
+  --md-accent-bg-color:                hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7);*/
+  /* --md-primary-fg-color:               #ffab40; */
+  /*--md-typeset-a-color:                #ffab40 !important;
+}*/
+
+/* Indentation Overrides */
+.indent-1 { padding-left: 1.5em; display: inline-block; white-space: nowrap; }
+.indent-2 { padding-left: 3em; display: inline-block; white-space: nowrap; }
+.indent-3 { padding-left: 4.5em; display: inline-block; white-space: nowrap; }
+
+/* Image Overrides */
+img.img-inline-text {
+    position: relative;
+    top: 0.5em;
+    width: 1.8em;
+    height: 1.8em;
+}
+img.img-before {
+    margin-right: 0.2em;
+}
+img.img-after {
+    margin-left: 0.2em;
+}
+
+/* Color Overrides */
+.md-tabs, .md-header, .md-nav--primary .md-nav__title[for=__drawer] {
+    background-color: #003C5E;
+}
+
+/* Logo Styles */
+.md-header__inner a.md-header__button.md-logo {
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+.md-header__inner a.md-header__button.md-logo img {
+    position: relative;
+    margin: 0px auto;
+    height: 32px;
+    top: -4px;
+    left: -2px;
+}
+
+/* Card Button Styles */
+.md-typeset .grid.cards>ol>li, .md-typeset .grid.cards>ul>li, .md-typeset .grid>.card {
+    border: .05rem solid var(--md-primary-fg-color);
+    border-radius: .1rem;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transition: border .25s, box-shadow .25s;
+}
+    .md-typeset .grid.cards>ol>li:focus-within, .md-typeset .grid.cards>ol>li:hover, .md-typeset .grid.cards>ul>li:focus-within, .md-typeset .grid.cards>ul>li:hover, .md-typeset .grid>.card:focus-within, .md-typeset .grid>.card:hover {
+        border: .05rem solid var(--md-accent-fg-color);
+        box-shadow: var(--md-shadow-z2);
+    }
+
+/* Navigation Styles */
+.md-typeset .grid.cards>ol>li>a, .md-typeset .grid.cards>ul>li>a, .md-typeset .grid>.card>a {
+    display: block;
+    padding: .8rem;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 76.25em) {
+    nav.md-nav.md-nav--primary>ul>li>nav>ul>li>label.md-nav__link {
+        margin-top: 1.6rem;
+        color: var(--md-primary-fg-color--dark);
+    }
+
+    nav.md-nav.md-nav--primary>ul>li>label.md-nav__link {
+        color: var(--md-accent-fg-color) !important;
+    }
+}
