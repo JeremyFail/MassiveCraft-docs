@@ -59,7 +59,11 @@ nav:
   - CreativeGates:
       - Introduction: CreativeGates/index.md
       - Player Guide: CreativeGates/player-guide.md
-      - Admin Guide: CreativeGates/admin-guide.md
+      - Admin Guide:
+          - Overview: CreativeGates/admin-guide/index.md
+          - Commands: CreativeGates/admin-guide/commands.md
+          - Permissions: CreativeGates/admin-guide/permissions.md
+          - Configuration: CreativeGates/admin-guide/configuration.md
   - MassiveBooks:
       - Introduction: MassiveBooks/index.md
       - Player Guide: MassiveBooks/player-guide.md

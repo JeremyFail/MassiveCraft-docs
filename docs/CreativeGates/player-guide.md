@@ -2,54 +2,97 @@
 
 # Player Guide
 
-This guide walks through the basic steps of using CreativeGates as a player.
+This guide covers creating and using CreativeGates as a player.
 
 !!! info "Note"
 
-    The instructions below reference specific item requirements to construct CreativeGates or mention usage of specific items to interact with a gate. The referenced items can be configured by server admins and may not be the same on the server you're playing on. Contact your server administrator to find out the rules for the server you're playing on.
-
+    Items, required frame blocks, and which fills you can choose are configured by the server administrator. Contact your server administrator if something below does not match what you see in-game.
 
 ## How to Create a Portal
 
-1. **Build a Frame:**  
-   
-    - Make a rectangular frame using any solid block.
-    - The frame can be any size and shape, as long as it is enclosed.
-    - The frame must also contain two emerald blocks.
+1. **Build a Frame**
 
-2. **Activate the Portal:**  
-   
-    - A [![Clock Image](img/Clock.gif){ .img-inline-text .img-before }Clock](https://minecraft.wiki/w/Clock) is used for the initial creation of the gate.
-    - Name the clock with an [![Anvil Image](img/Anvil.png){ .img-inline-text .img-before }Anvil](https://minecraft.wiki/w/Anvil) and click the inside of the gate frame with the clock. 
-    - A gate will be created using the clock name as the gate network name.
-    - Mind where you stand when you create the gate. That location will be used as the exit location for this gate.
+    - Make a closed frame using solid blocks (rectangle or other enclosed shape).
+    - The frame must contain the required blocks (default: **two emerald blocks**).
+    - Frames can be **vertical** (wall) or **horizontal** (floor/ceiling), if the server allows horizontal gates.
+    - Stand where you want the exit to be - your location when creating becomes this gate's exit.
 
-3. **Repeat steps 1 and 2 in the other location(s) for the gate network**
+2. **Activate the Portal**
 
-4. **Travel:**  
-    - Walk into the portal to teleport to a linked gate.
+    - A [![Clock Image](img/Clock.gif){ .img-inline-text .img-before }Clock](https://minecraft.wiki/w/Clock) is the default creation tool.
+    - Rename the clock with an [![Anvil Image](img/Anvil.png){ .img-inline-text .img-before }Anvil](https://minecraft.wiki/w/Anvil). That name becomes the **network name**.
+    - Click the **inside** of the empty frame with the named clock.
+
+3. **Choose a Fill (when offered)**
+
+    - If you are allowed to pick fills and more than one is available, a fill picker opens.
+    - Choose a look (nether portal, water, lava, particles, etc.) - only types the server allows appear.
+    - For particle fills you may also set how dense the particles are.
+    - If you cannot pick a fill, the server's default fill is used automatically.
+
+4. **Link the Network**
+
+    - Repeat at another location using a clock with the **same network name**.
+
+5. **Travel**
+
+    - Walk into the portal to teleport to another gate on that network.
 
 ## Gate Networks
 
-Gates are connected to the other gates in the same network. The network name is chosen when creating the gate. The size, design or what materials you have in the frame does not matter, only the gate network name must be the same between the gates.
+Gates with the same network name are linked. Frame size, shape, and materials do not affect linking - only the network name must match. Spelling matters.
 
-## Inspecting the Gate
+## Inspecting a Gate
 
-[![Blaze Powder Image](img/BlazePowder.png){ .img-inline-text .img-before }Blaze Powder](https://minecraft.wiki/w/Blaze_Powder) can be used on the gate to inspect it. When doing so you will see the network name and the amount of gates in the network. 
+[![Blaze Powder Image](img/BlazePowder.png){ .img-inline-text .img-before }Blaze Powder](https://minecraft.wiki/w/Blaze_Powder) on a gate (or `/cg inspect` while looking at one) shows:
 
-Usage of this tool can be restricted to the gate creator by using magma cream as explained below.
+- Owner, network name, and how many gates are on that network
+- Settings such as Secret, Entry/Exit Mode, Players/Mobs/Vehicles Usage settings
 
-## Enabling and Disabling Enter and Exit
+If a gate is **Secret** (restricted), only the creator (and staff with override) can read the full details.
 
-A [![Blaze Rod Image](img/BlazeRod.png){ .img-inline-text .img-before }Blaze Rod](https://minecraft.wiki/w/Blaze_Rod) can be used on the gate to toggle whether enter and exit is enabled or disabled. If enter is disabled nothing will happen when you walk into it. If exit is disabled the gate won't be used as an exit by other gates.
+You can also run:
 
-Usage of this tool can be restricted to the gate creator by using magma cream as explained below.
+```
+/cg inspect
+```
 
-## Restricting the Gate
+while looking at a gate. Use `/cg tool` if inspect/manage tools seem disabled for you.
 
-[![Magma Cream Image](img/MagmaCream.png){ .img-inline-text .img-before }Magma Cream](https://minecraft.wiki/w/Magma_Cream) can be used on the gate to toggle whether the gate is restricted. Only the creator of the gate can do this. If the gate is restricted, only the creator can use tools on the gate. This will for example make the network name secret.
+## Managing a Gate
+
+[![Blaze Rod Image](img/BlazeRod.png){ .img-inline-text .img-before }Blaze Rod](https://minecraft.wiki/w/Blaze_Rod) on a gate you own (or `/cg manage`) opens the manage UI.
+
+On modern Minecraft Servers this is a native dialog; older servers fall back to a clickable chat and chest menu system.
+
+From manage you can toggle:
+
+| Setting | Effect |
+|---------|--------|
+| **Secret** | Only the creator can read full inspect details (hides network info from others) |
+| **Entry** | Whether this gate can be used as an entrance |
+| **Exit** | Whether this gate can be used as an exit by other gates |
+| **Players** | Whether players may travel through |
+| **Mobs** | Whether living mobs may travel (leads, mounts, wandering mobs) |
+| **Vehicles** | Whether boats, minecarts, and similar may travel |
+
+If you have permission, manage also lets you change the **gate fill** after creation.
+
+## Horizontal Gates
+
+If enabled on the server, you can build floor or ceiling frames. Entering a horizontal gate may keep your momentum (falling/flying through), depending on server settings.
+
+## Mobs and Vehicles
+
+When allowed by the server and the gate settings:
+
+- Mobs can wander through, follow on leads, or travel as living mounts
+- Boats, minecarts, and other non-living vehicles can travel
+- Both the **entry** and **destination** gate must allow that kind of traveler
 
 ## Tips
 
-- Only gates with the same network name are linked. Check your spelling when naming the gate creation item.
-- If you break the frame, the portal will deactivate.
+- Only matching network names link - check spelling on the creation item
+- Breaking the frame deactivates the portal
+- Use `/cg tool` to turn inspect/manage item tools on or off without dropping them
+- If manage says only the creator can manage the gate, you do not own it (ask staff if needed)

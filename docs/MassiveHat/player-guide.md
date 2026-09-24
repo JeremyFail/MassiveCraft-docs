@@ -29,7 +29,7 @@ You are told in-game that you can also equip your hat like a regular helmet (put
 2. **Run** the hat command (e.g. `/hat` or `/mhat`).
 3. The block is now on your head.
 
-Only blocks (and any items your server allows, such as banners) that the server has configured as hats can be used. If the command doesn’t work, the block or item may be disabled—check with staff.
+Only blocks (and any items your server allows, such as banners) that the server has configured as hats can be used. If the command doesn’t work, the block or item may be disabled - check with staff.
 
 ## Tips
 
