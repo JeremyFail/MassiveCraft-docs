@@ -19,7 +19,7 @@ Base aliases default to `/cg`, `/creativegates`, and `/creativegate` (configurab
 
 ## Player workflows (tools)
 
-Most players never need commands. Defaults:
+Players can use tools to perform most CreativeGates actions (no commands needed). Defaults:
 
 | Action | Default item | Notes |
 |--------|--------------|-------|
@@ -27,14 +27,14 @@ Most players never need commands. Defaults:
 | Inspect | Blaze powder | Same data as `/cg inspect` |
 | Manage | Blaze rod | Same as `/cg manage` - settings + optional fill change |
 
-`/cg tool` only disables the **item** tools for that player; `/cg inspect` and `/cg manage` still work if they have permission.
+`/cg tool` disables the **item** tools for that player; `/cg inspect` and `/cg manage` still work if they have permission.
 
 ## Manage UI
 
-- **Paper (native dialog available):** dialog with toggles for Secret, Entry, Exit, Players, Mobs, Vehicles, and Gate Fill
+- **Dialog (newer versions):** dialog with toggles for Secret, Entry, Exit, Players, Mobs, Vehicles, and Gate Fill
 - **Fallback:** clickable chat table (same settings)
 
-Only the gate creator can manage unless the player has override mode or `creativegates.cg.override.bypass`.
+Currently, only the gate creator can manage, unless the player has override mode or `creativegates.cg.override.bypass`.
 
 ## Override mode
 

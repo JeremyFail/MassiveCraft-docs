@@ -15,22 +15,9 @@ Changes are detected and reloaded automatically after a few seconds - no restart
 !!! warning "JSON only"
     Comments in the examples below are for explanation. **Do not** put `//` comments in the real file.
 
-## Migration from older versions
-
-On load, CreativeGates migrates legacy fields:
-
-| Removed / legacy | Becomes |
-|------------------|---------|
-| `usingWater` | `allowedGateTypes` / `allowedHorizontalGateTypes` |
-| `useLavaInNether` | `replaceWaterWithLavaInNether` |
-| `materialMode` | `materialManage` |
-| `materialSecret` | removed (Secret is a manage setting) |
-
-`pigmanPortalSpawnAllowed` is obsolete: nether-portal **look** no longer places real portal blocks on the server.
-
 ## Gate fills
 
-Fills are chosen from allow-lists. Block fills and particle fills are separate.
+Fills (i.e. the "portal" blocks that fill the inside of a gate frame) are chosen from allow-lists. Block fills and particle fills are separate.
 
 ### Supported block fill ids
 
@@ -50,10 +37,10 @@ Defaults also allow several decorative materials. Invalid ids are dropped on loa
 
 Particle ids use a `PARTICLE_` prefix (e.g. `PARTICLE_PORTAL`, `PARTICLE_FLAME`) so they never collide with materials like `LAVA`. Configure via:
 
-- `allowedGateParticleTypes` (vertical)
-- `allowedHorizontalGateParticleTypes` (horizontal)
+- `allowedGateParticleTypes` (vertical gates)
+- `allowedHorizontalGateParticleTypes` (horizontal gates)
 
-Particle density uses `gateFillParticleAmountMin` / `Max` / `Default` (clamped to 1–128).
+Particle density uses `gateFillParticleAmountMin` / `Max` / `Default` (Cannot currently go over 128)
 
 ### Nether - Water to Lava
 
